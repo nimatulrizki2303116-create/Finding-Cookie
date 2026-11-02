@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resep - Cookie Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-halaman="resep">
+<!-- Navigasi -->
+<header class="navbar">
+    <a class="brand" href="home.html"><img src="gambar/logo.png" alt=""><span>Cookie Finder</span></a>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="find.html" class="aktif">Find</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="favorite.html">Favorite</a>
+    </nav>
+</header>
+ 
+<main class="bagian">
+    <!-- Header resep -->
+    <section class="panel resep-head">
+        <div class="lingkaran besar"><img id="r-gambar" src="" alt=""></div>
+        <div>
+            <h1 id="r-nama"></h1>
+            <div class="pil-wrap" id="r-meta"></div>
+            <div class="pil-wrap">
+                <button class="btn" id="r-fav">♡ Add to favorites</button>
+                <a class="btn btn-pink-soft" href="find.html">Cari resep lain</a>
+            </div>
+        </div>
+    </section>
+ 
+    <div class="grid-2">
+        <!-- Bahan -->
+        <section class="panel">
+            <h2>Ingredients</h2>
+            <p class="sub">Centang bahan yang sudah kamu siapkan.</p>
+            <ul class="cek" id="r-bahan"></ul>
+        </section>
+ 
+        <!-- Langkah -->
+        <section class="panel">
+            <h2>Cara membuat</h2>
+            <p class="sub garis">Ikuti langkah sederhana berikut untuk membuat cookie hangat.</p>
+            <strong class="no-langkah" id="l-no"></strong>
+            <div class="langkah-isi">
+                <span class="ikon-bintang">✦</span>
+                <h3 id="l-judul"></h3>
+            </div>
+            <p class="sub" id="l-isi"></p>
+            <div class="nav-langkah">
+                <button class="tautan" id="l-prev">← Sebelumnya</button>
+                <div class="dots" id="l-dots"></div>
+                <button class="btn kecil" id="l-next">Lanjut →</button>
+            </div>
+        </section>
+    </div>
+ 
+    <a class="btn btn-coklat" href="javascript:history.back()">← Kembali</a>
+</main>
+ 
+<script src="script.js"></script>
+</body>
+</html>

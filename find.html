@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find - Cookie Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-halaman="find">
+<!-- Navigasi -->
+<header class="navbar">
+    <a class="brand" href="home.html"><img src="gambar/logo.png" alt=""><span>Cookie Finder</span></a>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="find.html" class="aktif">Find</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="favorite.html">Favorite</a>
+    </nav>
+</header>
+ 
+<!-- Pilih bahan -->
+<main class="bagian" id="pemilih">
+    <h1>Apa yang ada di dapurmu?</h1>
+    <p class="sub">Pilih bahan yang tersedia di dapurmu. Tidak perlu lengkap, kami tetap carikan yang paling mendekati.</p>
+ 
+    <div id="grid-bahan">
+        <h4 class="label">Bahan Dasar</h4>
+        <div class="baris-bahan" id="bahan-dasar"></div>
+        <h4 class="label">Rasa &amp; Topping</h4>
+        <div class="baris-bahan" id="bahan-rasa"></div>
+    </div>
+ 
+    <div class="bar-pilih">
+        <div><strong id="jumlah-pilih">0 bahan dipilih</strong><p id="daftar-pilih"></p></div>
+        <div class="aksi">
+            <button class="btn btn-pink" id="btn-reset">reset</button>
+            <button class="btn" id="btn-cari">find my cookie</button>
+        </div>
+    </div>
+</main>
+ 
+<!-- Hasil -->
+<main class="bagian" id="hasil" hidden>
+    <h1 class="tengah">Your cookie matches</h1>
+    <p class="sub-tengah">Berdasarkan bahan yang kamu punya:</p>
+    <div class="chip-wrap" id="chip-bahan"></div>
+    <div class="grid-3" id="kartu-hasil"></div>
+    <button class="btn btn-coklat" id="btn-ubah">← Ubah bahan</button>
+</main>
+ 
+<script src="script.js"></script>
+</body>
+</html>

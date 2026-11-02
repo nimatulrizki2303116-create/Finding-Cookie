@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipes - Cookie Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-halaman="recipes">
+<!-- Navigasi -->
+<header class="navbar">
+    <a class="brand" href="home.html"><img src="gambar/logo.png" alt=""><span>Cookie Finder</span></a>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="find.html">Find</a>
+        <a href="recipes.html" class="aktif">Recipes</a>
+        <a href="favorite.html">Favorite</a>
+    </nav>
+</header>
+ 
+<main class="bagian">
+    <h1 class="tengah">All cookie recipes</h1>
+    <p class="sub-tengah">Temukan resep cookie favoritmu dan mulai baking hari ini.</p>
+    <div class="grid-3" id="semua-resep"></div>
+    <div class="kanan"><button class="btn btn-coklat" id="btn-tambah">+ tambah resep</button></div>
+</main>
+ 
+<!-- Form tambah resep -->
+<div class="modal" id="modal" hidden>
+    <form class="modal-isi" id="form-resep">
+        <h2>Tambah resep</h2>
+        <label>Nama cookies
+            <input type="text" id="f-nama" required placeholder="contoh: Cheese Cookies">
+        </label>
+        <label>Deskripsi
+            <textarea id="f-desk" rows="2" placeholder="Cerita singkat tentang cookie ini"></textarea>
+        </label>
+        <label>Estimasi waktu (menit)
+            <input type="number" id="f-waktu" min="1" required placeholder="25">
+        </label>
+        <label>Bahan (satu bahan per baris)
+            <textarea id="f-bahan" rows="4" required placeholder="150 g tepung terigu&#10;100 g mentega"></textarea>
+        </label>
+        <label>Cara membuat (satu langkah per baris)
+            <textarea id="f-langkah" rows="4" required placeholder="Campur mentega dan gula&#10;Panggang 12 menit"></textarea>
+        </label>
+        <label>Gambar (jika ada)
+            <input type="file" id="f-gambar" accept="image/*">
+        </label>
+        <img id="f-preview" class="preview" alt="Pratinjau gambar" hidden>
+        <div class="aksi">
+            <button type="button" class="btn btn-pink" id="f-batal">Batal</button>
+            <button type="submit" class="btn">Simpan resep</button>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
